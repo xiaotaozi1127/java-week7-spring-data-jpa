@@ -27,5 +27,8 @@ configurations {
 dependencies {
     runtime('mysql:mysql-connector-java')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.flywaydb:flyway-core:5.0.7')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.h2database:h2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
