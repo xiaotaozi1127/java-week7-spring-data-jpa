@@ -3,6 +3,9 @@ buildscript {
         springBootVersion = '2.0.0.RELEASE'
     }
     repositories {
+        maven {
+            url "http://ec2-54-222-235-15.cn-north-1.compute.amazonaws.com.cn:8081/repository/maven-central/"
+        }
         mavenCentral()
     }
     dependencies {
@@ -12,12 +15,15 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'maven'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'war'
 
 repositories {
-    mavenCentral()
+    maven {
+        url "http://ec2-54-222-235-15.cn-north-1.compute.amazonaws.com.cn:8081/repository/maven-central/"
+    }
 }
 
 configurations {
