@@ -22,6 +22,9 @@ public class Employee {
         this.companyId = companyId;
     }
 
+    public Employee() {
+    }
+
     public String getName() {
         return name;
     }
